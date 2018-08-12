@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 08-08-2018 a las 08:54:53
--- Versión del servidor: 5.7.21
--- Versión de PHP: 5.6.35
+-- Tiempo de generación: 12-08-2018 a las 21:14:04
+-- Versión del servidor: 5.7.19
+-- Versión de PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -57,8 +57,16 @@ CREATE TABLE IF NOT EXISTS `groups` (
   `id` int(7) NOT NULL AUTO_INCREMENT,
   `name_G` varchar(50) NOT NULL,
   `level_G` int(2) NOT NULL,
+  `teacherId_G` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `groups`
+--
+
+INSERT INTO `groups` (`id`, `name_G`, `level_G`, `teacherId_G`) VALUES
+(5, 'ITI-3-3', 7, 1730314);
 
 -- --------------------------------------------------------
 
@@ -79,7 +87,14 @@ CREATE TABLE IF NOT EXISTS `students` (
   `email_S` varchar(50) NOT NULL,
   `phoneNumber_S` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `students`
+--
+
+INSERT INTO `students` (`id`, `idStudent_S`, `name_S`, `surnameF_S`, `surnameM_S`, `career_S`, `level_S`, `group_S`, `email_S`, `phoneNumber_S`) VALUES
+(2, 1730000, 'Pedro Luis Espinoza Marinez', 'Pedro Luis', 'Marinez', 'PYMES', 2, 'Iti1', 'Plemmartinez1999@hotmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -98,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `teachers` (
   `email_T` varchar(50) NOT NULL,
   `phoneNumber_T` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `teachers`

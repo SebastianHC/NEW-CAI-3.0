@@ -21,14 +21,14 @@ session_start();
 <!--Navbar-->
 <body class="text-center">
 <nav class="navbar navbar-expand-lg navbar-light"style="background-color: #663399;">
-<a class="navbar-brand text-warning" href="panelSU.php">CAI</a>
+<a class="navbar-brand text-warning" href="panelT.php">CAI</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link text-warning" href="logoutSU.php">Log out</a>
+                  <a class="nav-link text-warning" href="logoutT.php">Log out</a>
                 </li>
           </ul>
         </div>
@@ -53,8 +53,6 @@ session_start();
       <th scope="col">Second Surname</th>
       <th scope="col">E-mail</th>
       <th scope="col">Phone-number</th>
-      <th scope="col">Update Teacher</th>
-      <th scope="col">Remove Teacher</th>
     </tr>
   </thead>
   <tbody>

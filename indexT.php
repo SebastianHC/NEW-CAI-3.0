@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include 'dbconnect.php';
+	include 'conexion.php';
 	if(isset($_SESSION['idTeacher_T'])){
 		echo '<script> window.location="panelT.php"; </script>';
 	}
