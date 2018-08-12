@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-include 'dbconnect.php';
+include 'conexion.php';
 
 if(isset($_SESSION['idTeacher_T'])) {?>
 <!DOCTYPE html>
@@ -78,7 +78,7 @@ if(isset($_SESSION['idTeacher_T'])) {?>
         <div class="card-body">
           <h5 class="card-title">Groups Viewer</h5>
           <p class="card-text">Groups of CAI</p>
-          <a href="view_G.php" class="btn btn-primary">View</a>
+          <a href="view_G_T.php" class="btn btn-primary">View</a>
         </div>
       </div>
 <br>
@@ -88,7 +88,7 @@ if(isset($_SESSION['idTeacher_T'])) {?>
         <div class="card-body">
           <h5 class="card-title">Teachers Viewer</h5>
           <p class="card-text">Teachers of CAI</p>
-          <a href="view_T.php" class="btn btn-primary">View</a>
+          <a href="view_T_T.php" class="btn btn-primary">View</a>
         </div>
       </div>
       <br>
@@ -98,7 +98,7 @@ if(isset($_SESSION['idTeacher_T'])) {?>
         <div class="card-body">
           <h5 class="card-title">Students Viewer</h5>
           <p class="card-text">Students of CAI</p>
-          <a href="view_S.php" class="btn btn-primary">View</a>
+          <a href="view_S_T.php" class="btn btn-primary">View</a>
         </div>
       </div>
   </div>
