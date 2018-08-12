@@ -1,5 +1,5 @@
 <?php
-include 'dbconnect.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +69,7 @@ include 'dbconnect.php';
 </div>
 
   <!--Form-->
-<form action="register_T.php" method="post">
+<form action="register_Save_T.php" method="post">
 
 
     <div class="form-group col-md-5">
