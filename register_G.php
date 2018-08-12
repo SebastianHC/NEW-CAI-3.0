@@ -93,7 +93,5 @@ include_once 'dbconnect.php';
   <button type="submit" name="saveG"class="btn btn-primary">Save</button>
   <a type="cancel" href="panelSU.php" class="btn btn-primary" >Cancel</a>
 </form>
-
-
 </body>
 </html>
