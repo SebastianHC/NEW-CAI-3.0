@@ -1,26 +1,20 @@
 <?php 
 
-	$host_db = "localhost";
- 	$user_db = "root";
- 	$pass_db = "";
- 	$db_name = "base_de_datos_cai";
-
-
-	$conexion = new mysqli($host_db,$user_db,$pass_db,$db_name);
+	$conexion = new mysqli('localhost','root','','base_de_datos_cai');
 
 	if($conexion->connect_error){
 		die("La conexion ha fallado: ".$conexion->connect_error);
 	}
 
-	$buscarUsuario = "SELECT * FROM teachers WHERE idTeacher_T = '$_POST[idteacher]'";
+	$buscarTeacher = "SELECT * FROM teachers WHERE idTeacher_T = '$_POST[idteacher]'";
 
-	$result = $conexion->query($buscarUsuario);
+	$result = $conexion->query($buscarTeacher);
 	$count = mysqli_num_rows($result);
 
 	if($count == 1){
-		$query = "INSERT INTO groups (nombreGrupo,maestro_id,nivel,alumnos) VALUES ('$_POST[nombre]','$_POST[idteacher]','$_POST[nivel]',NULL)";
+		$query = "INSERT INTO groups (name_G,level_G,teacherId_G) VALUES ('$_POST[name_G]','$_POST[level_G]','$_POST[idteacher]')";
 		if($conexion->query($query)==TRUE){
-			echo"<br/>"."<h2>"."Grupo creado exitosamente!"."</h2>";
+			echo"<br/>"."<h2>"."Grupo creado."."</h2>";
 		}
 		else{
 			echo"Error al crear grupo".$query."<br>".$conexion->error;

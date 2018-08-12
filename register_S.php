@@ -69,7 +69,7 @@ include 'dbconnect.php';
     </div>
 
   <!--Form-->
-    <form action="#.php" method="post">
+    <form action="register_Save_S.php" method="post">
       <div class="form-group col-md-5">
         <label for="username">Id</label>
         <input type="text" class="form-control" name="idStudent_S" placeholder="Id Student">
@@ -103,14 +103,26 @@ include 'dbconnect.php';
       </div>
 
       <div class="form-group col-md-5">
-      <label for="levelstu">Level</label>
-      <input type="text" class="form-control" name="level_S" placeholder="Level">
-      </div>
+      <label for="career">Level</label>
+      <select class="custom-select" name="level_S">
+        <option selected>Choose...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
     
       <div class="form-group col-md-5">
       <label for="grupo">Group</label>
       <input type="text" class="form-control" name="group_S"placeholder="Group">
       </div>
+
 
       <div class="form-group col-md-5">
       <label for="groupstu">E-mail</label>
