@@ -61,6 +61,7 @@ session_start();
             echo "<tr><td>".$row['name_G']."</td";
             echo "<tr><td>".$row['level_G']."</td";
             echo "<tr><td>".$row['teacherId_G']."</td";
+            echo "<tr><td></td>";
     	}
     ?>
   </tbody>

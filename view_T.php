@@ -69,6 +69,8 @@ session_start();
           echo "<tr><td>".$row['surnameM_T']."</td";
           echo "<tr><td>".$row['email_T']."</td";
           echo "<tr><td>".$row['phoneNumber_T']."</td";
+          echo "<tr><td><a href='update_T.php?id=".$row['id']."'>Update</a></td>";
+          echo "<td><a href='delete_T.php?id=".$row['id']."'>Remove</a></td>";
       }
   ?>
 </tbody>
