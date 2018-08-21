@@ -73,7 +73,6 @@ session_start();
       <th scope="col">Group</th>
       <th scope="col">E-mail</th>
       <th scope="col">Phone-Number</th>
-      <th scope="col">Report</th>
       <th scope="col">Update Student</th>
       <th scope="col">Remove Student</th>
     </tr>
@@ -93,6 +92,8 @@ session_start();
           echo "<tr><td>".$row['group_S']."</td";
           echo "<tr><td>".$row['email_S']."</td";
           echo "<tr><td>".$row['phoneNumber_S']."</td";
+          echo "<tr><td><a href='update_S.php?id=".$row['id']."'>Update</a></td>";
+          echo "<td><a href='delete_S.php?id=".$row['id']."'>Remove</a></td>";
       }
   ?>
 </tbody>

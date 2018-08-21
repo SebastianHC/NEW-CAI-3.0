@@ -21,8 +21,8 @@
 		}
 	}
 	else{
-		echo"No existe el ID del profesor"."<br/>";
-		echo"<a href='register_G.php'>Ingrese un ID correcto</a>";
+		echo"The Teacher ID doesn´t exist"."<br/>";
+		echo"<a href='register_G.php'>Enter Correct ID.</a>";
 	}
 
 ?>

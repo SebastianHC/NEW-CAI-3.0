@@ -67,6 +67,7 @@ session_start();
           echo "<tr><td>".$row['surnameM_T']."</td";
           echo "<tr><td>".$row['email_T']."</td";
           echo "<tr><td>".$row['phoneNumber_T']."</td";
+          echo "<tr><td></td>";
       }
   ?>
 </tbody>

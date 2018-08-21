@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 12-08-2018 a las 21:14:04
--- Versión del servidor: 5.7.19
--- Versión de PHP: 5.6.31
+-- Host: 127.0.0.1:3306
+-- Generation Time: Aug 13, 2018 at 10:57 AM
+-- Server version: 5.7.19
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `base_de_datos_cai`
+-- Database: `base_de_datos_cai`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `admin`
+-- Table structure for table `admin`
 --
 
 DROP TABLE IF EXISTS `admin`;
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username_A`, `password_A`, `email_A`, `phoneNumber_A`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `admin` (`id`, `username_A`, `password_A`, `email_A`, `phoneNumber_A
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `groups`
+-- Table structure for table `groups`
 --
 
 DROP TABLE IF EXISTS `groups`;
@@ -59,19 +59,20 @@ CREATE TABLE IF NOT EXISTS `groups` (
   `level_G` int(2) NOT NULL,
   `teacherId_G` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `groups`
+-- Dumping data for table `groups`
 --
 
 INSERT INTO `groups` (`id`, `name_G`, `level_G`, `teacherId_G`) VALUES
-(5, 'ITI-3-3', 7, 1730314);
+(9, 'ITI-3-2', 1, 1730314),
+(8, 'ITI-3-1', 8, 1730314);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `students`
+-- Table structure for table `students`
 --
 
 DROP TABLE IF EXISTS `students`;
@@ -87,19 +88,19 @@ CREATE TABLE IF NOT EXISTS `students` (
   `email_S` varchar(50) NOT NULL,
   `phoneNumber_S` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `students`
+-- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`id`, `idStudent_S`, `name_S`, `surnameF_S`, `surnameM_S`, `career_S`, `level_S`, `group_S`, `email_S`, `phoneNumber_S`) VALUES
-(2, 1730000, 'Pedro Luis Espinoza Marinez', 'Pedro Luis', 'Marinez', 'PYMES', 2, 'Iti1', 'Plemmartinez1999@hotmail.com', NULL);
+(3, 1730314, 'Juanito', 'Alegria', 'Sonrisas', 'ITI', 9, 'ITI-3-2', '173000@upv.edu.mx', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `teachers`
+-- Table structure for table `teachers`
 --
 
 DROP TABLE IF EXISTS `teachers`;
@@ -113,14 +114,14 @@ CREATE TABLE IF NOT EXISTS `teachers` (
   `email_T` varchar(50) NOT NULL,
   `phoneNumber_T` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `teachers`
+-- Dumping data for table `teachers`
 --
 
 INSERT INTO `teachers` (`id`, `idTeacher_T`, `password_T`, `name_T`, `surnameF_T`, `surnameM_T`, `email_T`, `phoneNumber_T`) VALUES
-(1, '1730314', '1234', 'PlemT', 'E', 'M', '1730314@upv.edu.mx', 834166728);
+(5, '1730314', '1234', 'Maestro', 'Diez', 'Nueve', 'maestro@upv.edu.mx', 834177890);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -63,6 +63,8 @@ session_start();
             echo "<tr><td>".$row['name_G']."</td";
             echo "<tr><td>".$row['level_G']."</td";
             echo "<tr><td>".$row['teacherId_G']."</td";
+            echo "<tr><td><a href='update_G.php?id=".$row['id']."'>Update</a></td>";
+            echo "<td><a href='delete_G.php?id=".$row['id']."'>Remove</a></td>";
     	}
     ?>
   </tbody>
